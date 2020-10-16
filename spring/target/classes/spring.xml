@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ 1.哪些类需要关联
+ 2.怎么告诉这些类 bean
+ 3.怎么维护依赖关系 setter、构造方法
+ 4.怎么体现setter或者构造方法
+ -->
+<beans>
+
+    <bean id="dao" class="com.cm.dao.UserDaoImpl"></bean>
+
+    <bean id="service" class="com.cm.service.UserServiceImpl">
+        <!--setter-->
+        <property name="dao" ref="dao"></property>
+    </bean>
+
+</beans>

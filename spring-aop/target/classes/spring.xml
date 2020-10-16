@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+           default-autowire="constructor">
+
+
+    <bean id="dao" class="com.cm.dao.IndexDaoImpl"></bean>
+
+    <bean id="service" class="com.cm.dao.IndexService">
+       <!-- <property name="dao" ref="dao"></property>-->
+        <!--<constructor-arg ref="dao"></constructor-arg>-->
+    </bean>
+
+</beans>
